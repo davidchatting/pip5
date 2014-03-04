@@ -83,8 +83,6 @@ public class RaspberryPi {
   String removeBashMarkUp(String s) {
     String result=null;
 
-    System.out.println("removeBashMarkUp");
-
     String bash="(?)\\[(.*?)m";
     result=s.replaceAll(bash, "");
 

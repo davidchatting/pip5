@@ -40,6 +40,8 @@ public class RaspberryPi {
   String sendCommand(String command, boolean removeMarkUp) {
     String result=null;
 
+    System.out.println(command);
+
     write(13);  //hit enter
     delay(50);
 
@@ -130,7 +132,7 @@ public class RaspberryPi {
     String result=null;
 
     if (s!=null) {   
-      String[] m = PApplet.match(s, "^(\\S*\\$)\\s");
+      String[] m = PApplet.match(s, "^(\\S*[\\$\\#])\\s");
       if (m!=null && m.length>0) {
         result=new String(m[1]);
       }
